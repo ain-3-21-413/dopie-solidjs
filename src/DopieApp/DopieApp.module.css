@@ -1,0 +1,44 @@
+.app {
+    background-color: gainsboro;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: gainsboro;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+    'navbar main sidebar'
+    'navbar footer footer';
+    grid-template-columns: 300px 1fr 300px;
+}
+
+.navbar {
+    grid-area: navbar;
+    height: calc(100vh - 75px);
+    position: sticky;
+    top: 75px;
+}
+
+.main {
+    grid-area: main;
+    background-color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
