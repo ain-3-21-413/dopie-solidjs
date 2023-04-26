@@ -1,0 +1,49 @@
+.match {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 0.7em;
+}
+
+.match .top {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    opacity: .5;
+    font-size: 14px;
+}
+
+.match .top .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: black;
+}
+
+.match .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match .bottom .teams {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    font-weight: 700;
+}
+
+.match .bottom button {
+    background-color: black;
+    color: white;
+    border: 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: .5em;
+    cursor: pointer;
+}

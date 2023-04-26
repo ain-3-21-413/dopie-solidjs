@@ -1,3 +1,6 @@
 .home {
     padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
 }

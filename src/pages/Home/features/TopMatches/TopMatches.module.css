@@ -1,0 +1,24 @@
+.top_matches {
+    display: flex;
+    flex-direction: column;
+}
+
+.top_matches h3 {
+    border-top: 1px solid gainsboro ;
+    border-bottom: 1px solid gainsboro;
+    padding: 0.7em 0;
+}
+
+.matches {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.matches > div {
+    width: 50%;
+    border-bottom: 1px solid gainsboro;
+}
+
+.matches > div:nth-child(odd) {
+    border-right: 1px solid gainsboro;
+}
