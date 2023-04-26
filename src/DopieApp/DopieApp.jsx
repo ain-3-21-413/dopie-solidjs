@@ -1,3 +1,4 @@
+import Home from '../pages/Home/Home';
 import styles from './DopieApp.module.css';
 
 export default function DopieApp() {
@@ -13,7 +14,7 @@ export default function DopieApp() {
 
                     </div>
                     <div class={styles.main}>
-
+                        <Home />
                     </div>
                     <div class={styles.sidebar}>
 
