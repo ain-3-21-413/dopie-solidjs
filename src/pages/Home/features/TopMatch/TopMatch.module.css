@@ -1,0 +1,71 @@
+.top_match {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fixture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fixture .top h3 {
+    width: max-content;
+    font-weight: 700;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    letter-spacing: .3em;
+}
+
+.fixture .center {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fixture .center .info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fixture .center .info span:nth-child(1) {
+    font-weight: 700;
+}
+
+.fixture .center .info .dot {
+    content: '';
+    background-color: gray;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.fixture .center .teams {
+    font-size: 1.7rem;
+    font-weight: 700;
+    display: flex;
+    gap: 5px;
+}
+
+.outcomes {
+    display: grid;
+    grid-template-areas: 
+    'one one'
+    'two three';
+    gap: .3rem;
+}
+
+.outcomes .one {
+    grid-area: one;
+}
+
+.outcomes .two {
+    grid-area: two;
+    width: 140px;
+}
+
+.outcomes .three {
+    grid-area: three;
+    width: 140px;
+}

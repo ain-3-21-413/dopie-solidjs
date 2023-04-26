@@ -6,7 +6,7 @@ import TopPredictions from './features/TopPredictions/TopPredictions';
 export default function Home() {
     
     return (
-        <div>
+        <div class={styles.home}>
             <TopMatch />
             <TopMatches />
             <TopPredictions />
