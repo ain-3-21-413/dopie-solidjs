@@ -1,5 +1,5 @@
 .app {
-    background-color: gainsboro;
+    background-color: #f3f4f8;
 }
 
 .container {
@@ -8,7 +8,7 @@
 }
 
 .header {
-    background-color: gainsboro;
+    background-color: #f3f4f8;
     height: 75px;
     position: sticky;
     top: 0;
