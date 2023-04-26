@@ -1,4 +1,6 @@
 .top_matches {
+    padding: 1.7em;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
 }
