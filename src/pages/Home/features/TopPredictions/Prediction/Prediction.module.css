@@ -1,0 +1,65 @@
+.prediction {
+    
+}
+
+.prediction .body {
+    padding: 0.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    background-color: black;
+    color: white;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+.prediction .top {
+    display: flex;
+    gap: 0.3em;
+    opacity: .7;
+    font-size: 14px;
+    border-bottom: 1px solid white;
+    width: max-content;
+}
+
+.prediction .info {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-size: 14px;
+    opacity: .7;
+}
+
+.prediction .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.prediction .teams {
+    font-weight: 700;
+    display: flex;
+    gap: .3em;
+}
+
+.prediction .footer {
+    padding: .7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+.prediction .coefficient {
+    background-color: black;
+    color: white;
+    width: max-content;
+    padding: 0.2em 0.4em;
+    font-size: 14px;
+    border-radius: .5em;
+}

@@ -1,0 +1,19 @@
+.top_predictions {
+    padding: 1.7em;
+    padding-top: 0;
+}
+
+.top_predictions h3 {
+    padding: 0.7em 0;
+}
+
+.predictions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.predictions > div {
+    width: calc(100% / 3 - 1rem);
+}
