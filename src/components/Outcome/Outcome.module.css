@@ -1,0 +1,45 @@
+.outcome {
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: .7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.outcome .coefficient {
+    background-color: black;
+    color: white;
+    width: max-content;
+    padding: 0.2em 0.4em;
+    font-size: 14px;
+    border-radius: .5em;
+}
+
+.outcome .body {
+    display: flex;
+    flex-direction: column;
+}
+
+.outcome .body .name {
+    font-weight: 700;
+}
+
+.outcome .body .count {
+    font-size: 12px;
+    opacity: .7;
+}
+
+.outcome button {
+    background-color: black;
+    color: white;
+    border: 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: .5em;
+    cursor: pointer;
+}
