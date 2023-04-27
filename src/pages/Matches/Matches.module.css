@@ -1,0 +1,12 @@
+.matches {
+    padding: 1.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.leagues {
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+}

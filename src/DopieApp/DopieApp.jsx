@@ -1,4 +1,5 @@
 import Home from '../pages/Home/Home';
+import Matches from '../pages/Matches/Matches';
 import styles from './DopieApp.module.css';
 
 export default function DopieApp() {
@@ -14,7 +15,8 @@ export default function DopieApp() {
 
                     </div>
                     <div class={styles.main}>
-                        <Home />
+                        {/* <Home /> */}
+                        <Matches />
                     </div>
                     <div class={styles.sidebar}>
 

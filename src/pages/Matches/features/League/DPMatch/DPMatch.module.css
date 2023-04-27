@@ -1,0 +1,75 @@
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match .left {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.match .info {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.match .info > .time {
+    font-weight: 700;
+}
+
+.match .teams {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.match .right {
+    padding-right: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.match .outcomes {
+    display: flex;
+}
+
+.match .outcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.match .outcome {
+    padding: 0.5em;
+}
+
+.match .outcome:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.match .outcome:nth-child(1) {
+    border-left: 1px solid black;
+}
+
+.match .outcome > .coefficient {
+    font-weight: 600;
+}
+
+.match .right button {
+    background-color: black;
+    color: white;
+    border: 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: .5em;
+    cursor: pointer;
+}
