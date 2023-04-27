@@ -1,0 +1,64 @@
+.prediction .top {
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    padding: .5em;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    font-size: 1.1rem;
+}
+
+.prediction .center {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+.prediction .center .fixture {
+    border-bottom: 1px solid black;
+    padding: .5em;
+}
+
+.prediction .center .fixture .info {
+    display: flex;
+    gap: 0.3em;
+    font-size: 14px;
+}
+
+.prediction .center .fixture .info > span:nth-child(2) {
+    font-weight: 700;
+}
+
+.prediction .center .fixture .teams {
+    display: flex;
+    gap: 0.3em;
+    font-weight: 700;
+}
+
+.prediction .center .outcome {
+    padding: .5em;
+}
+
+.prediction .center .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    padding: .5em;
+    padding-top: 0;
+}
+
+.prediction .link {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+}

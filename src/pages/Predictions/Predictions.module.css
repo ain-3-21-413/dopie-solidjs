@@ -1,0 +1,16 @@
+.predictions {
+    display: flex;
+    flex-direction: column;    
+    padding: 1.7em;
+    gap: 1em;
+}
+
+.predictions > div {
+    font-size: 14px;
+}
+
+.predictions_list {
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+}
