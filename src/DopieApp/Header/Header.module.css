@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header .logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+}

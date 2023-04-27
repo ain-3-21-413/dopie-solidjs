@@ -1,0 +1,7 @@
+.navbar {
+    padding: 1.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    cursor: pointer;
+}
