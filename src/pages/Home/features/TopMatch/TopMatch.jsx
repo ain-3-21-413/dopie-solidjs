@@ -1,3 +1,4 @@
+import { useNavigate } from '@solidjs/router';
 import Button from '../../../../components/Button/Button';
 import Outcome from '../../../../components/Outcome/Outcome';
 import styles from './TopMatch.module.css';
@@ -10,6 +11,7 @@ const data = {
         date: '27 апр',
         country: 'Англия',
         league: 'Премьер-лига',
+        slug: '27-04-2023-manchester-city-arsenal',
     },
     outcomes: [
         {
@@ -31,6 +33,8 @@ const data = {
 }
 
 export default function TopMatch() {
+
+    const navigate = useNavigate();
 
     return (
         <div class={styles.top_match}>
@@ -71,7 +75,7 @@ export default function TopMatch() {
                         </span>
                     </div>  
                 </div>
-                <Button variant="fill">
+                <Button variant="fill" onClick={() => navigate('/matches/' + data.fixture.slug)}>
                     ПРОГНОЗ РЕДАКЦИИ
                 </Button>
             </div>

@@ -1,0 +1,123 @@
+.match {
+}
+
+.fixture {
+    padding: 1.7em;
+    padding-bottom: 2.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    background-color: green;
+    color: white;
+}
+
+.fixture .top {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.fixture .top .dot {
+    background-color: white;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.fixture .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.fixture .bottom .home, .fixture .bottom .away {
+    font-weight: 700;
+    font-size: 1.4em;
+    flex: 1;
+}
+
+.fixture .bottom .away {
+    text-align: right;
+}
+
+.fixture .bottom .dateTime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.fixture .bottom .dateTime span:nth-child(1) {
+    font-weight: 700;
+    font-size: 1.7em;
+}
+
+.fixture .bottom .dateTime span:nth-child(2) {
+    font-size: 14px;
+}
+
+.match article {
+    padding: 1.7em;
+}
+
+.match h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.match h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.match p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.match h2 {
+    margin-bottom: 0.5em;
+}
+
+.match h3 {
+    margin-bottom: .3em;
+}
+
+.match p {
+    margin-bottom: 1em;
+}
+
+.match .popular_outcomes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1.7em;
+    padding-top: 0;
+}
+
+.match .popular_outcomes .outcomes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.3em;
+}
+
+.match .popular_outcomes .outcomes > div {
+    width: calc(100% / 3 - 0.3em);
+}
+
+.predictions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1.7em;
+    padding-top: 0;
+}
+
+.predictions_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
