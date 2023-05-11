@@ -1,0 +1,157 @@
+.fixture {
+    background-color: coral;
+    color: white;
+    font-weight: 700;
+    padding: 1.7rem;
+}
+
+.fixture .info {
+    font-weight: 400;
+    display: flex;
+    gap: .3em;
+    font-size: 14px;
+}
+
+.fixture .main {
+    font-size: 1.4em;
+}
+
+.fixture .main > div {
+    display: flex;
+    gap: 0.3em;
+}
+
+.fixture .teams {
+    cursor: pointer;
+}
+
+/* ================================== */
+
+.predictor {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.7rem;
+    border-bottom: 1px solid gainsboro;
+}
+
+.predictor .predictorName {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.predictor .stats {
+    display: flex;
+    gap: 1em;
+}
+
+.predictor .wins {
+    color: green;
+    font-weight: 700;
+}
+
+.predictor .returns {
+    color: goldenrod;
+    font-weight: 700;
+}
+
+.predictor .loses {
+    color: red;
+    font-weight: 700;
+}
+
+/* =============================================== */
+
+.prediction {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    padding: 1rem 1.7rem;
+}
+
+.prediction .text {
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* ================================================== */
+
+.outcome {
+    position: relative;
+    border-radius: .5rem;
+    padding: 1em;
+    padding-top: 2.7em;
+    margin: 1.7em;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3em;
+}
+
+.outcome::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: blue;
+    position: absolute;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.outcome .badge {
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: blue;
+    color: white;
+    padding: 0.2em 0.3em;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.outcome .top {
+    font-size: 1.2em;
+    font-weight: 700;
+    display: flex;
+    gap: .3em;
+}
+
+.outcome .coefficient {
+    color: blue;
+}
+
+.outcome .center {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.outcome .sum {
+    opacity: 0.7;
+    display: flex;
+    padding: 0.1em .3em;
+    border-radius: .5em;
+    background-color: white;
+}
+
+.outcome button {
+    cursor: pointer;
+    margin-top: .7em;
+    border: 1px solid gray;
+    font-size: 14px;
+    padding: 1em;
+    font-weight: 700;
+    opacity: .7;
+    width: 100%;
+    border-radius: .5rem;
+    background-color: unset;
+}

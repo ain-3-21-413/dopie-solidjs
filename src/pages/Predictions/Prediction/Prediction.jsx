@@ -1,6 +1,9 @@
+import { useNavigate } from '@solidjs/router';
 import styles from './Prediction.module.css';
 
 export default function Prediction(props) {
+
+    const navigate = useNavigate();
 
     return (
         <div class={styles.prediction}>
@@ -11,7 +14,7 @@ export default function Prediction(props) {
             </div>
             <div class={styles.center}>
                 <div class={styles.fixture}>
-                    <div class={styles.info}>
+                    <div class={styles.info} onClick={() => navigate("/matches/" + props.matchSlug)}>
                         <span>
                             {props.prediction.date}
                         </span>
@@ -19,7 +22,7 @@ export default function Prediction(props) {
                             {props.prediction.time}
                         </span>
                     </div>
-                    <div class={styles.teams}>
+                    <div class={styles.teams} onClick={() => navigate("/matches/" + props.matchSlug)}>
                         <span>
                             {props.prediction.home}
                         </span>
@@ -39,7 +42,10 @@ export default function Prediction(props) {
                         {props.prediction.outcomeName}
                     </span>
                 </div>
-                <div class={styles.intro}>
+                <div 
+                    class={styles.intro} 
+                    onClick={() => navigate("/predictions/" + props.slug)}
+                >
                     <For each={props.prediction.intro}>{(paragraph) =>
                         <p>
                             {paragraph}

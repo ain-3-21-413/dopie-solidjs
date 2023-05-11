@@ -24,6 +24,7 @@
     display: flex;
     gap: 0.3em;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .prediction .center .fixture .info > span:nth-child(2) {
@@ -34,6 +35,7 @@
     display: flex;
     gap: 0.3em;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .prediction .center .outcome {
@@ -49,6 +51,7 @@
     line-height: 1.7;
     padding: .5em;
     padding-top: 0;
+    cursor: pointer;
 }
 
 .prediction .link {
