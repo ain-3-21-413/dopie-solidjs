@@ -12,6 +12,7 @@ const data = [
                 date: '28 апр',
                 home: 'Тоттенхэм',
                 away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
                 outcomes: [
                     {
                         name: 'П1',
@@ -32,6 +33,7 @@ const data = [
                 date: '28 апр',
                 home: 'Тоттенхэм',
                 away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
                 outcomes: [
                     {
                         name: 'П1',
@@ -52,112 +54,7 @@ const data = [
                 date: '28 апр',
                 home: 'Тоттенхэм',
                 away: 'Манчестер Юнайтед',
-                outcomes: [
-                    {
-                        name: 'П1',
-                        coefficient: '2.85',
-                    },
-                    {
-                        name: 'X',
-                        coefficient: '3.82',
-                    },
-                    {
-                        name: 'П2',
-                        coefficient: '2.48',
-                    },
-                ]
-            },
-        ],
-    },
-    {
-        country: 'Англия',
-        league: 'Премьер Лига',
-        matches: [
-            {
-                time: '00:45',
-                date: '28 апр',
-                home: 'Тоттенхэм',
-                away: 'Манчестер Юнайтед',
-                outcomes: [
-                    {
-                        name: 'П1',
-                        coefficient: '2.85',
-                    },
-                    {
-                        name: 'X',
-                        coefficient: '3.82',
-                    },
-                    {
-                        name: 'П2',
-                        coefficient: '2.48',
-                    },
-                ]
-            },
-            {
-                time: '00:45',
-                date: '28 апр',
-                home: 'Тоттенхэм',
-                away: 'Манчестер Юнайтед',
-                outcomes: [
-                    {
-                        name: 'П1',
-                        coefficient: '2.85',
-                    },
-                    {
-                        name: 'X',
-                        coefficient: '3.82',
-                    },
-                    {
-                        name: 'П2',
-                        coefficient: '2.48',
-                    },
-                ]
-            },
-            {
-                time: '00:45',
-                date: '28 апр',
-                home: 'Тоттенхэм',
-                away: 'Манчестер Юнайтед',
-                outcomes: [
-                    {
-                        name: 'П1',
-                        coefficient: '2.85',
-                    },
-                    {
-                        name: 'X',
-                        coefficient: '3.82',
-                    },
-                    {
-                        name: 'П2',
-                        coefficient: '2.48',
-                    },
-                ]
-            },
-            {
-                time: '00:45',
-                date: '28 апр',
-                home: 'Тоттенхэм',
-                away: 'Манчестер Юнайтед',
-                outcomes: [
-                    {
-                        name: 'П1',
-                        coefficient: '2.85',
-                    },
-                    {
-                        name: 'X',
-                        coefficient: '3.82',
-                    },
-                    {
-                        name: 'П2',
-                        coefficient: '2.48',
-                    },
-                ]
-            },
-            {
-                time: '00:45',
-                date: '28 апр',
-                home: 'Тоттенхэм',
-                away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
                 outcomes: [
                     {
                         name: 'П1',
@@ -184,6 +81,7 @@ const data = [
                 date: '28 апр',
                 home: 'Тоттенхэм',
                 away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
                 outcomes: [
                     {
                         name: 'П1',
@@ -204,6 +102,70 @@ const data = [
                 date: '28 апр',
                 home: 'Тоттенхэм',
                 away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
+                outcomes: [
+                    {
+                        name: 'П1',
+                        coefficient: '2.85',
+                    },
+                    {
+                        name: 'X',
+                        coefficient: '3.82',
+                    },
+                    {
+                        name: 'П2',
+                        coefficient: '2.48',
+                    },
+                ]
+            },
+            {
+                time: '00:45',
+                date: '28 апр',
+                home: 'Тоттенхэм',
+                away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
+                outcomes: [
+                    {
+                        name: 'П1',
+                        coefficient: '2.85',
+                    },
+                    {
+                        name: 'X',
+                        coefficient: '3.82',
+                    },
+                    {
+                        name: 'П2',
+                        coefficient: '2.48',
+                    },
+                ]
+            },
+            {
+                time: '00:45',
+                date: '28 апр',
+                home: 'Тоттенхэм',
+                away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
+                outcomes: [
+                    {
+                        name: 'П1',
+                        coefficient: '2.85',
+                    },
+                    {
+                        name: 'X',
+                        coefficient: '3.82',
+                    },
+                    {
+                        name: 'П2',
+                        coefficient: '2.48',
+                    },
+                ]
+            },
+            {
+                time: '00:45',
+                date: '28 апр',
+                home: 'Тоттенхэм',
+                away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
                 outcomes: [
                     {
                         name: 'П1',
@@ -230,6 +192,54 @@ const data = [
                 date: '28 апр',
                 home: 'Тоттенхэм',
                 away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
+                outcomes: [
+                    {
+                        name: 'П1',
+                        coefficient: '2.85',
+                    },
+                    {
+                        name: 'X',
+                        coefficient: '3.82',
+                    },
+                    {
+                        name: 'П2',
+                        coefficient: '2.48',
+                    },
+                ]
+            },{
+                time: '00:45',
+                date: '28 апр',
+                home: 'Тоттенхэм',
+                away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
+                outcomes: [
+                    {
+                        name: 'П1',
+                        coefficient: '2.85',
+                    },
+                    {
+                        name: 'X',
+                        coefficient: '3.82',
+                    },
+                    {
+                        name: 'П2',
+                        coefficient: '2.48',
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        country: 'Англия',
+        league: 'Премьер Лига',
+        matches: [
+            {
+                time: '00:45',
+                date: '28 апр',
+                home: 'Тоттенхэм',
+                away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
                 outcomes: [
                     {
                         name: 'П1',
@@ -250,6 +260,7 @@ const data = [
                 date: '28 апр',
                 home: 'Тоттенхэм',
                 away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
                 outcomes: [
                     {
                         name: 'П1',
@@ -270,6 +281,7 @@ const data = [
                 date: '28 апр',
                 home: 'Тоттенхэм',
                 away: 'Манчестер Юнайтед',
+                slug: '28-04-2023-tottenham-manchester-united',
                 outcomes: [
                     {
                         name: 'П1',

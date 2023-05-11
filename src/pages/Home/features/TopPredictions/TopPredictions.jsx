@@ -11,7 +11,9 @@ const data = {
             home: 'Тоттенхэм',
             away: 'Манчестер Юнайтед',
             predictorName: 'Роман Гутцайт',
+            predictorSlug: 'roman-gudzeit',
             coefficient: '2.48',
+            slug: '28-04-2023-tottenham-manchester-united-roman-gudzeit',
         },
         {
             time: '01:15',
@@ -21,7 +23,9 @@ const data = {
             home: 'Тоттенхэм',
             away: 'Манчестер Юнайтед',
             predictorName: 'Роман Гутцайт',
+            predictorSlug: 'roman-gudzeit',
             coefficient: '2.48',
+            slug: '28-04-2023-tottenham-manchester-united-roman-gudzeit',
         },
         {
             time: '01:15',
@@ -31,7 +35,9 @@ const data = {
             home: 'Тоттенхэм',
             away: 'Манчестер Юнайтед',
             predictorName: 'Роман Гутцайт',
+            predictorSlug: 'roman-gudzeit',
             coefficient: '2.48',
+            slug: '28-04-2023-tottenham-manchester-united-roman-gudzeit',
         },
         {
             time: '01:15',
@@ -41,7 +47,9 @@ const data = {
             home: 'Тоттенхэм',
             away: 'Манчестер Юнайтед',
             predictorName: 'Роман Гутцайт',
+            predictorSlug: 'roman-gudzeit',
             coefficient: '2.48',
+            slug: '28-04-2023-tottenham-manchester-united-roman-gudzeit',
         },
         {
             time: '01:15',
@@ -51,7 +59,9 @@ const data = {
             home: 'Тоттенхэм',
             away: 'Манчестер Юнайтед',
             predictorName: 'Роман Гутцайт',
+            predictorSlug: 'roman-gudzeit',
             coefficient: '2.48',
+            slug: '28-04-2023-tottenham-manchester-united-roman-gudzeit',
         },
         {
             time: '01:15',
@@ -61,7 +71,9 @@ const data = {
             home: 'Тоттенхэм',
             away: 'Манчестер Юнайтед',
             predictorName: 'Роман Гутцайт',
+            predictorSlug: 'roman-gudzeit',
             coefficient: '2.48',
+            slug: '28-04-2023-tottenham-manchester-united-roman-gudzeit',
         },
     ]
 }
@@ -83,7 +95,9 @@ export default function TopPredictions() {
                         home={prediction.home} 
                         away={prediction.away} 
                         predictorName={prediction.predictorName}
-                        coefficient={prediction.coefficient}
+                        coefficient={prediction.coefficient} 
+                        slug={prediction.slug}
+                        predictorSlug={prediction.predictorSlug}
                     />
                 }</For>
             </div>

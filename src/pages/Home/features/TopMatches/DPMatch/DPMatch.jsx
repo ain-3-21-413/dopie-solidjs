@@ -1,6 +1,9 @@
+import { useNavigate } from '@solidjs/router';
 import styles from './DPMatch.module.css';
 
 export default function DPMatch(props) {
+
+    const navigate = useNavigate();
 
     return (
         <div class={styles.match}>
@@ -25,7 +28,7 @@ export default function DPMatch(props) {
                 </span>
             </div>
             <div class={styles.bottom}>
-                <div class={styles.teams}>
+                <div class={styles.teams} onClick={() => navigate("/matches/" + props.slug)}>
                     <span>
                         {props.home}
                     </span>

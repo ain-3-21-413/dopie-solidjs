@@ -8,7 +8,7 @@ export default function Prediction(props) {
     return (
         <div class={styles.prediction}>
             <div class={styles.top}>
-                <span>
+                <span class={styles.predictor} onClick={() => navigate("/predictors/" + props.prediction.predictorSlug)}>
                     {props.prediction.predictorName}
                 </span>
             </div>

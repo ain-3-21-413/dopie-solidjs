@@ -1,7 +1,10 @@
 import { For } from 'solid-js';
 import styles from './DPMatch.module.css';
+import { useNavigate } from '@solidjs/router';
 
 export default function DPMatch(props) {
+
+    const navigate = useNavigate();
 
     return (
         <div class={styles.match}>
@@ -14,7 +17,7 @@ export default function DPMatch(props) {
                         {props.match.date}
                     </span>
                 </div>
-                <div class={styles.teams}>
+                <div class={styles.teams} onClick={() => navigate("/matches/" + props.match.slug)}>
                     <span>
                         {props.match.home}
                     </span>

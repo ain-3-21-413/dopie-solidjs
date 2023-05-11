@@ -5,6 +5,7 @@ import Prediction from './Prediction/Prediction';
 const data = [
     {
         predictorName: 'Роман Гутцайт',
+        predictorSlug: 'roman-gudzeit',
         date: '28 апр',
         time: '01:15',
         home: 'Тоттенхэм',
@@ -22,6 +23,7 @@ const data = [
     },
     {
         predictorName: 'Роман Гутцайт',
+        predictorSlug: 'roman-gudzeit',
         date: '28 апр',
         time: '01:15',
         home: 'Тоттенхэм',
@@ -39,6 +41,7 @@ const data = [
     },
     {
         predictorName: 'Роман Гутцайт',
+        predictorSlug: 'roman-gudzeit',
         date: '28 апр',
         time: '01:15',
         home: 'Тоттенхэм',

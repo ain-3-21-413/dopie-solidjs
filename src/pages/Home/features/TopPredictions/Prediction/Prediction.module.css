@@ -41,6 +41,7 @@
     font-weight: 700;
     display: flex;
     gap: .3em;
+    cursor: pointer;
 }
 
 .prediction .footer {
@@ -53,6 +54,10 @@
     border-bottom: 1px solid gainsboro;
     border-bottom-left-radius: .5em;
     border-bottom-right-radius: .5em;
+}
+
+.footer .predictor {
+    cursor: pointer;
 }
 
 .prediction .coefficient {

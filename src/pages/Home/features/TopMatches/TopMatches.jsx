@@ -10,6 +10,7 @@ const data = {
             league: 'Премьер Лига',
             home: 'Вест Хэм',
             away: 'Ливерпуль',
+            slug: "27-04-2023-west-ham-liverpool",
         },
         {
             time: '00:45',
@@ -18,6 +19,7 @@ const data = {
             league: 'Премьер Лига',
             home: 'Вест Хэм',
             away: 'Ливерпуль',
+            slug: "27-04-2023-west-ham-liverpool",
         },
         {
             time: '00:45',
@@ -26,6 +28,7 @@ const data = {
             league: 'Премьер Лига',
             home: 'Вест Хэм',
             away: 'Ливерпуль',
+            slug: "27-04-2023-west-ham-liverpool",
         },
         {
             time: '00:45',
@@ -34,6 +37,7 @@ const data = {
             league: 'Премьер Лига',
             home: 'Вест Хэм',
             away: 'Ливерпуль',
+            slug: "27-04-2023-west-ham-liverpool",
         },
         {
             time: '00:45',
@@ -42,6 +46,7 @@ const data = {
             league: 'Премьер Лига',
             home: 'Вест Хэм',
             away: 'Ливерпуль',
+            slug: "27-04-2023-west-ham-liverpool",
         },
         {
             time: '00:45',
@@ -50,6 +55,7 @@ const data = {
             league: 'Премьер Лига',
             home: 'Вест Хэм',
             away: 'Ливерпуль',
+            slug: "27-04-2023-west-ham-liverpool",
         },
     ]  
 }
@@ -70,6 +76,7 @@ export default function TopMatches() {
                     league={match.league} 
                     home={match.home} 
                     away={match.away} 
+                    slug={match.slug}
                 />
                 }</For>
             </div>
