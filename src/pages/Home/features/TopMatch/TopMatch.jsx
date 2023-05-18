@@ -3,8 +3,12 @@ import Button from '../../../../components/Button/Button';
 import Outcome from '../../../../components/Outcome/Outcome';
 import styles from './TopMatch.module.css';
 import PredictionModal from '../../../../components/PredictionModal/PredictionModal';
+import { createSignal, onMount } from 'solid-js';
+import axios from 'axios';
+import { createStore } from 'solid-js/store';
+import { HStack, Heading } from '@hope-ui/solid';
 
-const data = {
+const initData = {
     fixture: {
         home: 'Манчестер Сити',
         away: 'Арсенал',
@@ -37,6 +41,24 @@ export default function TopMatch() {
 
     const navigate = useNavigate();
 
+    const [data, setData] = createStore(initData);
+    const [fixtureId, setFixtureId] = createSignal();
+
+    onMount(() => {
+        axios.get("http://localhost:8080/api/data/top-match")
+        .then(response => {
+            console.log(response.data);
+            setFixtureId(response.data.id);
+            setData("fixture", "home", response.data.home.shortName);
+            setData("fixture", "away", response.data.away.shortName);
+            setData("fixture", "slug", response.data.id);
+            setData("outcomes", response.data.outcomes)
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    })
+
     return (
         <div class={styles.top_match}>
             <PredictionModal />
@@ -65,17 +87,9 @@ export default function TopMatch() {
                             {data.fixture.league}
                         </span>
                     </div>
-                    <div class={styles.teams}>
-                        <span>
-                            {data.fixture.home}
-                        </span>
-                        <span>
-                            -
-                        </span>
-                        <span>
-                            {data.fixture.away}
-                        </span>
-                    </div>  
+                    <Heading fontSize={"$2xl"}>
+                        {data.fixture.home} - {data.fixture.away}
+                    </Heading>
                 </div>
                 <Button variant="fill" onClick={() => navigate('/matches/' + data.fixture.slug)}>
                     ПРОГНОЗ РЕДАКЦИИ
@@ -83,13 +97,13 @@ export default function TopMatch() {
             </div>
             <div class={styles.outcomes}>
                 <div class={styles.one}>
-                    <Outcome fixtureId={"100"} coefficient={data.outcomes[0].coefficient} name={data.outcomes[0].name} count={data.outcomes[0].count} wide />
+                    <Outcome fixtureId={fixtureId()} coefficient={data.outcomes[0].coefficient} name={data.outcomes[0].name} count={data.outcomes[0].count} wide />
                 </div>
                 <div class={styles.two}>
-                    <Outcome fixtureId={"100"} coefficient={data.outcomes[1].coefficient} name={data.outcomes[1].name} count={data.outcomes[1].count} />
+                    <Outcome fixtureId={fixtureId()} coefficient={data.outcomes[1].coefficient} name={data.outcomes[1].name} count={data.outcomes[1].count} />
                 </div>
                 <div class={styles.three}>
-                    <Outcome fixtureId={"100"} coefficient={data.outcomes[2].coefficient} name={data.outcomes[2].name} count={data.outcomes[2].count} />
+                    <Outcome fixtureId={fixtureId()} coefficient={data.outcomes[2].coefficient} name={data.outcomes[2].name} count={data.outcomes[2].count} />
                 </div>
             </div>
         </div>
