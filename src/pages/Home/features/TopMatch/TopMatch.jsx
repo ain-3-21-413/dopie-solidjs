@@ -14,7 +14,6 @@ const initData = {
         away: 'Арсенал',
         time: '01:00',
         date: '27 апр',
-        country: 'Англия',
         league: 'Премьер-лига',
         slug: '27-04-2023-manchester-city-arsenal',
     },
@@ -52,7 +51,10 @@ export default function TopMatch() {
             setData("fixture", "home", response.data.home.shortName);
             setData("fixture", "away", response.data.away.shortName);
             setData("fixture", "slug", response.data.id);
-            setData("outcomes", response.data.outcomes)
+            setData("fixture", "league", response.data.league);
+            setData("outcomes", response.data.outcomes);
+            setData("fixture", "date", response.data.date);
+            setData("fixture", "time", response.data.time);
         })
         .catch(error => {
             console.log(error);
@@ -75,12 +77,6 @@ export default function TopMatch() {
                         </span>
                         <span>
                             {data.fixture.date}
-                        </span>
-                        <span>
-                            |
-                        </span>
-                        <span>
-                            {data.fixture.country}
                         </span>
                         <span class={styles.dot}></span>
                         <span>

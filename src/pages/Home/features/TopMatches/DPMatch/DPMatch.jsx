@@ -13,7 +13,7 @@ export default function DPMatch(props) {
         <div class={styles.match}>
             <div class={styles.top}>
                 <span>
-                    {props.time}
+                    {props.match.time}
                 </span>
                 <span>
                     {props.date}
@@ -22,22 +22,22 @@ export default function DPMatch(props) {
                     |
                 </span>
                 <span>
-                    {props.country}
+                    {props.match.date}
                 </span>
                 <span class={styles.dot}>
 
                 </span>
                 <span>
-                    {props.league}
+                    {props.match.league}
                 </span>
             </div>
             <div class={styles.bottom}>
-                <div class={styles.teams} onClick={() => navigate("/matches/" + props.slug)}>
+                <div class={styles.teams} onClick={() => navigate("/matches/" + props.match.id)}>
                     <span>
-                        {props.home}
+                        {props.match.home.shortName}
                     </span>
                     <span>
-                        {props.away}
+                        {props.match.away.shortName}
                     </span>
                 </div>
                 <button onClick={onOpen}>
