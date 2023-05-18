@@ -1,5 +1,5 @@
 import { Button, HStack, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, SimpleOption, SimpleSelect, Textarea, VStack } from "@hope-ui/solid";
-import { useContext } from "solid-js";
+import { onMount, useContext } from "solid-js";
 import { ModalContext } from "../../providers/ModalProvider";
 import { CurrentPredictionContext } from "../../providers/CurrentPredictionProvider";
 
@@ -7,7 +7,14 @@ export default function PredictionModal() {
 
     const [{ isOpen, onOpen, onClose }] = useContext(ModalContext);
 
-    const [state] = useContext(CurrentPredictionContext);
+    const [state, { setDate, setTime, setHome, setAway, setOutcomeName, setOutcomeCoefficient, setText, clear }] = useContext(CurrentPredictionContext);
+
+    onMount(() => {
+        setDate("date");
+        setTime("time");
+        setHome("home");
+        setAway("away");
+    })
 
     return (
         <Modal opened={isOpen()} onClose={onClose}>
@@ -41,7 +48,7 @@ export default function PredictionModal() {
                         <Heading fontWeight={"normal"}>
                             Исход
                         </Heading>
-                        <SimpleSelect placeholder="Выбери" w={"250px"}>
+                        <SimpleSelect placeholder="Выбери" w={"250px"} onChange={(v) => {setOutcomeName(v)}}>
                             <SimpleOption value={"home"}>
                                 П1
                             </SimpleOption>
@@ -57,13 +64,23 @@ export default function PredictionModal() {
                         <Heading fontWeight={"normal"}>
                             Обоснование
                         </Heading>
-                        <Textarea>
+                        <Textarea onInput={(e) => setText(e.currentTarget.value)}>
                             {state.text}
                         </Textarea>
                     </VStack>
                 </ModalBody>
                 <ModalFooter>
-                    <Button fullWidth onClick={onClose}>
+                    <Button fullWidth onClick={() => {
+                        console.log({
+                            userId: "userId", 
+                            fixtureId: state.fixture.id, 
+                            outcomeName: state.outcome.name, 
+                            outcomeCoefficient: state.outcome.coefficient, 
+                            text: state.text
+                        }); 
+                        onClose();
+                        clear();
+                    }}>
                         Создать прогноз
                     </Button>
                 </ModalFooter>

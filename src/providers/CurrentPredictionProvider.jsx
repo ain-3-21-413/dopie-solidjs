@@ -7,6 +7,7 @@ export default function CurrentPredictionProvider(props) {
 
     const [state, setState] = createStore({
         fixture: {
+            id: "", 
             dateTime: {
                 date: "19 мая",
                 time: "05:45",
@@ -21,7 +22,7 @@ export default function CurrentPredictionProvider(props) {
             },
         },
         outcome: {
-            name: "ТБ (10)",
+            name: "",
             coefficient: "2.48",
         },
         text: "",
@@ -30,6 +31,9 @@ export default function CurrentPredictionProvider(props) {
     const currentPredictionValue = [
         state, 
         {
+            setFixtureId(fixtureId) {
+                setState("fixture", "id", fixtureId);
+            }, 
             setDate(date) {
                 setState("fixture", "dateTime", "date", date);
             },
@@ -51,6 +55,16 @@ export default function CurrentPredictionProvider(props) {
             setText(text) {
                 setState("text", text);
             }, 
+            clear() {
+                setState("fixture", "id", "");
+                setState("fixture", "dateTime", "date", "");
+                setState("fixture", "dateTime", "time", ""); 
+                setState("fixture", "teams", "home", "name", "");
+                setState("fixture", "teams", "away", "name", "");
+                setState("outcome", "name", "");
+                setState("outcome", "coefficient", "");
+                setState("text", "");
+            }
         }
     ]
 

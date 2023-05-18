@@ -3,8 +3,6 @@ import Button from '../../../../components/Button/Button';
 import Outcome from '../../../../components/Outcome/Outcome';
 import styles from './TopMatch.module.css';
 import PredictionModal from '../../../../components/PredictionModal/PredictionModal';
-import { useContext } from 'solid-js';
-import { ModalContext } from '../../../../providers/ModalProvider';
 
 const data = {
     fixture: {
@@ -38,8 +36,6 @@ const data = {
 export default function TopMatch() {
 
     const navigate = useNavigate();
-
-    const [{ isOpen, onOpen, onClose }] = useContext(ModalContext);
 
     return (
         <div class={styles.top_match}>
@@ -87,13 +83,13 @@ export default function TopMatch() {
             </div>
             <div class={styles.outcomes}>
                 <div class={styles.one}>
-                    <Outcome coefficient={data.outcomes[0].coefficient} name={data.outcomes[0].name} count={data.outcomes[0].count} wide />
+                    <Outcome fixtureId={"100"} coefficient={data.outcomes[0].coefficient} name={data.outcomes[0].name} count={data.outcomes[0].count} wide />
                 </div>
                 <div class={styles.two}>
-                    <Outcome coefficient={data.outcomes[1].coefficient} name={data.outcomes[1].name} count={data.outcomes[1].count} />
+                    <Outcome fixtureId={"100"} coefficient={data.outcomes[1].coefficient} name={data.outcomes[1].name} count={data.outcomes[1].count} />
                 </div>
                 <div class={styles.three}>
-                    <Outcome coefficient={data.outcomes[2].coefficient} name={data.outcomes[2].name} count={data.outcomes[2].count} />
+                    <Outcome fixtureId={"100"} coefficient={data.outcomes[2].coefficient} name={data.outcomes[2].name} count={data.outcomes[2].count} />
                 </div>
             </div>
         </div>
