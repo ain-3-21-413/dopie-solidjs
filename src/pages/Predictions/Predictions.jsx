@@ -1,6 +1,7 @@
 import { For } from 'solid-js';
 import styles from './Predictions.module.css';
 import Prediction from './Prediction/Prediction';
+import PredictionModal from '../../components/PredictionModal/PredictionModal';
 
 const data = [
     {
@@ -63,6 +64,7 @@ export default function Predictions() {
 
     return (
         <div class={styles.predictions}>
+            <PredictionModal />
             <div>
                 <h1>
                     Прогнозы

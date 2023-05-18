@@ -3,6 +3,7 @@ import styles from './DPMatchPage.module.css';
 import Outcome from '../../components/Outcome/Outcome';
 import { For } from 'solid-js';
 import Prediction from '../Predictions/Prediction/Prediction';
+import PredictionModal from '../../components/PredictionModal/PredictionModal';
 
 const data = {
     article: {
@@ -37,35 +38,20 @@ const data = {
     },
     popularOutcomes: [
         {
-            name: 'П2',
+            name: 'П1',
             coefficient: '2.44',
             count: '84 прогноза',
         },
         {
-            name: 'ТБ (2.5)',
+            name: 'X',
             coefficient: '1.69',
             count: '24 прогноза',
         },
         {
-            name: 'Ф2 (0)',
+            name: 'П2',
             coefficient: '1.79',
             count: '12 прогнозов',
-        },
-        {
-            name: 'ИТ2Б (1.5)',
-            coefficient: '1.98',
-            count: '12 прогнозов',
-        },
-        {
-            name: 'ТБ (3.5) ',
-            coefficient: '2.50',
-            count: '12 прогнозов',
-        },
-        {
-            name: 'ТБ (3.5) ',
-            coefficient: '2.50',
-            count: '12 прогнозов',
-        },
+        }, 
     ],
     predictions: [
         {
@@ -160,6 +146,7 @@ export default function DPMatchPage() {
 
     return (
         <div class={styles.match}>
+            <PredictionModal />
             <div class={styles.fixture}>
                 <div class={styles.top}>
                     <span>
@@ -222,14 +209,14 @@ export default function DPMatchPage() {
                             {data.article.preview.predictions.forMainOutcomes}
                         </p>
                     </div>
-                    <div>
+                    {/* <div>
                         <h3>
                             Прогноз на тотал голов {data.article.fixture.home} - {data.article.fixture.away}
                         </h3>
                         <p>
                             {data.article.preview.predictions.forTotalGoals}
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 <p>
                     <b>Автор прогноза </b>: {data.article.preview.author}

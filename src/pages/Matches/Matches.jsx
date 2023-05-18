@@ -1,6 +1,7 @@
 import { For } from 'solid-js';
 import styles from './Matches.module.css';
 import League from './features/League/League';
+import PredictionModal from '../../components/PredictionModal/PredictionModal';
 
 const data = [
     {
@@ -305,6 +306,7 @@ export default function Matches() {
 
     return (
         <div class={styles.matches}>
+            <PredictionModal />
             <div>
                 <h1>
                     Расписание матчей

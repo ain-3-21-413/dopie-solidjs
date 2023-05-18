@@ -1,3 +1,4 @@
+import PredictionModal from '../../../../components/PredictionModal/PredictionModal';
 import DPMatch from './DPMatch/DPMatch';
 import styles from './TopMatches.module.css';
 
@@ -64,6 +65,7 @@ export default function TopMatches() {
 
     return (
         <div class={styles.top_matches}>
+            <PredictionModal />
             <h3>
                 Топ матчи
             </h3>

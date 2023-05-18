@@ -1,7 +1,11 @@
 import { useNavigate } from '@solidjs/router';
 import styles from './Prediction.module.css';
+import { ModalContext } from '../../../providers/ModalProvider';
+import { useContext } from 'solid-js';
 
 export default function Prediction(props) {
+
+    const [{ isOpen, onOpen, onClose }] = useContext(ModalContext);
 
     const navigate = useNavigate();
 
@@ -52,7 +56,7 @@ export default function Prediction(props) {
                         </p>
                     }</For>
                 </div>
-                <span class={styles.link}>
+                <span class={styles.link} onClick={onOpen}>
                     Повторить прогноз
                 </span>
             </div>

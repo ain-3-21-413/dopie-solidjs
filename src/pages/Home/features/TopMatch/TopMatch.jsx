@@ -2,6 +2,9 @@ import { useNavigate } from '@solidjs/router';
 import Button from '../../../../components/Button/Button';
 import Outcome from '../../../../components/Outcome/Outcome';
 import styles from './TopMatch.module.css';
+import PredictionModal from '../../../../components/PredictionModal/PredictionModal';
+import { useContext } from 'solid-js';
+import { ModalContext } from '../../../../providers/ModalProvider';
 
 const data = {
     fixture: {
@@ -15,17 +18,17 @@ const data = {
     },
     outcomes: [
         {
-            name: 'ИТ1Б (2.5)',
+            name: 'П1',
             coefficient: '3.00',
             count: '72 прогноза',
         },
         {
-            name: 'П1',
+            name: 'X',
             coefficient: '1.65',
             count: '70 прогнозов',
         },
         {
-            name: 'Ф1 (-1.5)',
+            name: 'П2',
             coefficient: '2.63',
             count: '60 прогнозов',
         }
@@ -36,8 +39,11 @@ export default function TopMatch() {
 
     const navigate = useNavigate();
 
+    const [{ isOpen, onOpen, onClose }] = useContext(ModalContext);
+
     return (
         <div class={styles.top_match}>
+            <PredictionModal />
             <div class={styles.fixture}>
                 <div class={styles.top}>
                     <h3>

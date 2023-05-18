@@ -1,7 +1,11 @@
 import { useNavigate } from '@solidjs/router';
 import styles from './DPMatch.module.css';
+import { ModalContext } from '../../../../../providers/ModalProvider';
+import { useContext } from 'solid-js';
 
 export default function DPMatch(props) {
+
+    const [{ isOpen, onOpen, onClose }] = useContext(ModalContext);
 
     const navigate = useNavigate();
 
@@ -36,7 +40,7 @@ export default function DPMatch(props) {
                         {props.away}
                     </span>
                 </div>
-                <button>
+                <button onClick={onOpen}>
                     +
                 </button>
             </div>

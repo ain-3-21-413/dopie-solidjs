@@ -1,8 +1,11 @@
-import { createSignal, onMount } from 'solid-js';
+import { createSignal, onMount, useContext } from 'solid-js';
 import { createStore } from 'solid-js/store';
 import styles from './Outcome.module.css';
+import { ModalContext } from '../../providers/ModalProvider';
 
 export default function Outcome(props) {
+
+    const [{ isOpen, onOpen, onClose }] = useContext(ModalContext);
 
     const outcomeStyles = `${styles.outcome}`;
     const [style, setStyle] = createStore({
@@ -34,7 +37,7 @@ export default function Outcome(props) {
                     {props.count}
                 </span>
             </div>
-            <button>
+            <button onClick={onOpen}>
                 +
             </button>
         </div>

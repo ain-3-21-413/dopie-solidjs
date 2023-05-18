@@ -1,6 +1,8 @@
 import { useNavigate } from "@solidjs/router";
 import styles from "./PredictionPage.module.css";
-import { For } from "solid-js";
+import { For, useContext } from "solid-js";
+import PredictionModal from "../../components/PredictionModal/PredictionModal";
+import { ModalContext } from "../../providers/ModalProvider";
 
 const data = {
     fixture: {
@@ -31,7 +33,7 @@ const data = {
             "Питтсбург идет на ужасной серии, за 9 матчей, команда смогла добыть только одну победу и в каждом матче команда не смогла сделать более двух ранов. После хорошего старта, команда пошла на спад и как долго это еще продлится, пока не ясно. В прошлом матче Колорадо по делу обыграли их со счетом 1-10, Питтсбург вновь показал ужасную реализацию. Как раз вчера мы заходили на этот матч вместе с клиентами и поймали обидное поражение. Сегодня как на зло, Питтсбург свой тотал пробьет, но я воздержусь от данного варианта, а лучше рассмотрю тотал Колорадо. Больно мне нравится их бита и их игра. Хоть по статистике команда не внушает доверие, но по игре так не скажешь. Сегодня на горке у Питтсбург будет стоять пенсионер, который уже давно не блещет результатами, я думаю Колорадо воспользуется этим шансом и попробует забрать эту серию, тем более Питтсбург сейчас на серьезном спаде, поэтому лично для меня атака Колорадо выглядит тут по симпатичнее. Будем пробовать, а там игра покажет.",
         ],
         outcome: {
-            name: "ИТ2Б (3.5)",
+            name: "П1",
             coefficent: "1.81",
             sum: "10 000",
             possibleWin: "+8 100",
@@ -86,8 +88,11 @@ export default function PredictionPage() {
 
     const navigate = useNavigate();
 
+    const [{onOpen}] = useContext(ModalContext);
+
     return (
         <div>
+            <PredictionModal />
             <div class={styles.fixture}>
                 <div class={styles.info}>
                     <span>
@@ -178,7 +183,7 @@ export default function PredictionPage() {
                         {data.prediction.outcome.possibleWin}
                     </span>
                 </div>
-                <button>
+                <button onClick={onOpen}>
                     Повторить прогноз
                 </button>
             </div>
