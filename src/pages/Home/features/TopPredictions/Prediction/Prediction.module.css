@@ -11,6 +11,7 @@
     color: white;
     border-top-left-radius: .5em;
     border-top-right-radius: .5em;
+    height: 150px;
 }
 
 .prediction .top {

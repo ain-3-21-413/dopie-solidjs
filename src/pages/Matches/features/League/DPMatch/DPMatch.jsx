@@ -1,4 +1,4 @@
-import { For, useContext } from 'solid-js';
+import { For, onMount, useContext } from 'solid-js';
 import styles from './DPMatch.module.css';
 import { useNavigate } from '@solidjs/router';
 import { ModalContext } from '../../../../../providers/ModalProvider';
@@ -8,6 +8,10 @@ export default function DPMatch(props) {
     const [{ isOpen, onOpen, onClose }] = useContext(ModalContext);
 
     const navigate = useNavigate();
+
+    onMount(() => {
+        
+    })
 
     return (
         <div class={styles.match}>

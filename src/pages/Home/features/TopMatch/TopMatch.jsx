@@ -40,21 +40,16 @@ export default function TopMatch() {
 
     const navigate = useNavigate();
 
+    // const [data, setData] = createStore(initData);
     const [data, setData] = createStore(initData);
     const [fixtureId, setFixtureId] = createSignal();
 
+
+
     onMount(() => {
-        axios.get("http://localhost:8080/api/data/top-match")
+        axios.get("http://localhost:8080/api/matches/top-match")
         .then(response => {
-            console.log(response.data);
-            setFixtureId(response.data.id);
-            setData("fixture", "home", response.data.home.shortName);
-            setData("fixture", "away", response.data.away.shortName);
-            setData("fixture", "slug", response.data.id);
-            setData("fixture", "league", response.data.league);
-            setData("outcomes", response.data.outcomes);
-            setData("fixture", "date", response.data.date);
-            setData("fixture", "time", response.data.time);
+            setData(response.data)
         })
         .catch(error => {
             console.log(error);

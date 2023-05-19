@@ -1,7 +1,8 @@
-import { For } from 'solid-js';
+import { For, createSignal, onMount } from 'solid-js';
 import styles from './Matches.module.css';
 import League from './features/League/League';
 import PredictionModal from '../../components/PredictionModal/PredictionModal';
+import axios from 'axios';
 
 const data = [
     {
@@ -303,6 +304,16 @@ const data = [
 ]
 
 export default function Matches() {
+
+    const [matches, setMatches] = createSignal();
+
+    onMount(() => {
+        axios.get("http://localhost:8080/api/matches")
+        .then(res => {
+            console.log(res.data);
+            set(res.data);
+        })
+    })
 
     return (
         <div class={styles.matches}>

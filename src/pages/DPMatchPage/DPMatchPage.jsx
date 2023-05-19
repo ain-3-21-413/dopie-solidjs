@@ -8,12 +8,12 @@ import PredictionModal from '../../components/PredictionModal/PredictionModal';
 const data = {
     article: {
         fixture: {
-            country: 'Англия',
-            league: 'Премьер-лига',
-            time: '01:15',
-            date: '28 апреля',
-            home: 'Тоттенхэм',
-            away: 'Манчестер Юнайтед',
+            country: 'England',
+            league: 'Premier League',
+            time: '19:00',
+            date: '24 may',
+            home: 'Brighton Hove',
+            away: 'Man City',
         },
         preview: {
             intro: `Завершать программу 33-го тура АПЛ будет матч между “Тоттенхэмом“ и “Манчестер Юнайтед“. Их очная встреча пройдет 27 апреля 2023 года на стадионе “Тоттенхэм Хотспур“. Оправдают ли гости статус фаворита поединка?`,

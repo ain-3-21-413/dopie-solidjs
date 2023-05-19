@@ -1,13 +1,16 @@
 import { useNavigate } from '@solidjs/router';
 import styles from './DPMatch.module.css';
 import { ModalContext } from '../../../../../providers/ModalProvider';
-import { useContext } from 'solid-js';
+import { onMount, useContext } from 'solid-js';
 
 export default function DPMatch(props) {
 
     const [{ isOpen, onOpen, onClose }] = useContext(ModalContext);
 
     const navigate = useNavigate();
+
+    onMount(() => {
+    })
 
     return (
         <div class={styles.match}>
@@ -16,28 +19,27 @@ export default function DPMatch(props) {
                     {props.match.time}
                 </span>
                 <span>
-                    {props.date}
+                    {props.match.date}
                 </span>
                 <span>
                     |
                 </span>
                 <span>
-                    {props.match.date}
+                    {props.match.country}
                 </span>
                 <span class={styles.dot}>
-
                 </span>
                 <span>
                     {props.match.league}
                 </span>
             </div>
             <div class={styles.bottom}>
-                <div class={styles.teams} onClick={() => navigate("/matches/" + props.match.id)}>
+                <div class={styles.teams} onClick={() => navigate("/matches/" + props.match.slug)}>
                     <span>
-                        {props.match.home.shortName}
+                        {props.match.home}
                     </span>
                     <span>
-                        {props.match.away.shortName}
+                        {props.match.away}
                     </span>
                 </div>
                 <button onClick={onOpen}>

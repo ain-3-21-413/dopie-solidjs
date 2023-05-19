@@ -38,7 +38,7 @@ export default function Outcome(props) {
                     {props.name}
                 </span>
                 <span class={styles.count}>
-                    {props.count}
+                    {props.count + " bets"}
                 </span>
             </div>
             <button onClick={() => {
